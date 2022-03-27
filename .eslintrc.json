@@ -21,12 +21,14 @@
   "plugins": ["react", "@typescript-eslint"],
   "rules": {
     "react/jsx-props-no-spreading": "off",
-    "prettier/prettier": "error",
+    "prettier/prettier": "off",
     "react-hooks/rules-of-hooks": "off",
     "react-hooks/exhaustive-deps": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
     "import/prefer-default-export": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
+    "no-param-reassign": "off",
+    "react/jsx-no-bind": "off",
     "import/extensions": [
       "error",
       "ignorePackages",
