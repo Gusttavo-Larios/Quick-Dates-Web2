@@ -3,8 +3,8 @@ import { useField } from '@unform/core';
 
 type InputTypes = {
   name: string;
-  placeholder: string;
-  type: string;
+  placeholder?: string;
+  type?: string;
 };
 
 function Input({ name, ...rest }: InputTypes) {

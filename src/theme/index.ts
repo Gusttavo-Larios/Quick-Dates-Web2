@@ -9,6 +9,7 @@ const theme: DefaultTheme = {
     GREEN_900: '#142018',
     GRAY_100: '#F7F7F7',
     GRAY_200: '#CCCCCC',
+    GRAY_500: '#9C9C9C',
     GRAY_600: '#696969',
     BLACK_900: '#000000',
     WHITE_100: '#FFFFFF',

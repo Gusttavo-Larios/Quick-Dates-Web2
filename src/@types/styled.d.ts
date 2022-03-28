@@ -10,6 +10,7 @@ declare module 'styled-components' {
       GREEN_900: string;
       GRAY_100: string;
       GRAY_200: string;
+      GRAY_500: string;
       GRAY_600: string;
       BLACK_900: string;
       WHITE_100: string;
