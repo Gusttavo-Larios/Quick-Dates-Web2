@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { useField } from '@unform/core';
 
-interface InputTypes extends React.InputHTMLAttributes<HTMLInputElement> {
+interface TextAreaType
+  extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   name: string;
-  type?: string;
 }
 
-function Input({ name, ...rest }: InputTypes) {
-  const inputRef = React.useRef<HTMLInputElement>(null);
+function TextArea({ name, ...rest }: TextAreaType) {
+  const inputRef = React.useRef(null);
   const { fieldName, defaultValue, registerField } = useField(name);
 
   React.useEffect(() => {
@@ -26,14 +26,7 @@ function Input({ name, ...rest }: InputTypes) {
     });
   }, [fieldName, registerField]);
 
-  return (
-    <input
-      id={fieldName}
-      ref={inputRef}
-      defaultValue={defaultValue}
-      {...rest}
-    />
-  );
+  return <textarea ref={inputRef} defaultValue={defaultValue} {...rest} />;
 }
 
-export default Input;
+export default TextArea;

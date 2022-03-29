@@ -12,6 +12,10 @@ const GlobalStyle = createGlobalStyle`
     :root {
         font-size: 62.5%;
     }
+
+    body {
+      overflow-x: hidden;
+    }
 `;
 
 export default GlobalStyle;

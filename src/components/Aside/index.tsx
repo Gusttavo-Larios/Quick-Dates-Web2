@@ -1,7 +1,7 @@
+import { useLocation } from 'react-router-dom';
+import { useTheme } from 'styled-components';
 import { AiOutlineFileAdd, AiOutlineCalendar } from 'react-icons/ai';
 import { FiLogOut } from 'react-icons/fi';
-import { useTheme } from 'styled-components';
-import { useLocation } from 'react-router-dom';
 import { BoxPagesBrowse, Button, Container, Page } from './styles';
 
 function Aside() {
@@ -19,10 +19,13 @@ function Aside() {
   return (
     <Container>
       <BoxPagesBrowse>
-        <Page to="#" isActive={isCurrentRoute('add-activity')}>
+        <Page
+          to="/schedule-activity"
+          isActive={isCurrentRoute('schedule-activity')}
+        >
           <AiOutlineFileAdd
             color={
-              isCurrentRoute('add-activity')
+              isCurrentRoute('schedule-activity')
                 ? theme.COLORS.WHITE_100
                 : theme.COLORS.GREEN_400
             }
@@ -30,10 +33,13 @@ function Aside() {
           />
           Agendar
         </Page>
-        <Page to="#" isActive={isCurrentRoute('schedule-activities')}>
+        <Page
+          to="/scheduled-activities"
+          isActive={isCurrentRoute('scheduled-activities')}
+        >
           <AiOutlineCalendar
             color={
-              isCurrentRoute('schedule-activities')
+              isCurrentRoute('scheduled-activities')
                 ? theme.COLORS.WHITE_100
                 : theme.COLORS.GREEN_400
             }

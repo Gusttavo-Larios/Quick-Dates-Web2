@@ -2,6 +2,9 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const Container = styled.aside`
+  position: fixed;
+  top: 11.5rem;
+  left: 0;
   width: 23.5rem;
   height: 20rem;
   background-color: ${props => props.theme.COLORS.GRAY_100};
@@ -45,6 +48,7 @@ export const Page = styled(Link)<PageType>`
   }
 
   &:hover {
+    transform: scale(1.05);
     filter: opacity(0.5);
   }
 `;
@@ -66,6 +70,7 @@ export const Button = styled.button`
   transition: all 0.3s ease-in-out;
 
   &:hover {
+    transform: scale(1.05);
     filter: opacity(0.5);
   }
 `;

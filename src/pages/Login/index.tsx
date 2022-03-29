@@ -4,12 +4,16 @@ import { useNavigate } from 'react-router-dom';
 
 // import api from '../../services/api';
 
+import AuthInterface from '../../interfaces/auth.interface';
+import authSchema from '../../schemas/auth.schema';
+
+import Footer from '../../components/Footer';
+
 import {
   BoxAnimations,
   BoxContent,
   Container,
   Description,
-  Footer,
   Header,
   InputText,
   Option,
@@ -23,8 +27,6 @@ import LogoDesktop from '../../assets/images/logo-desktop.svg';
 import LogoMobile from '../../assets/images/logo-mobile.svg';
 import BookSvg from '../../assets/images/book.svg';
 import ScheuleSvg from '../../assets/images/schedule.svg';
-import AuthInterface from '../../interfaces/auth.interface';
-import authSchema from '../../schemas/auth.schema';
 
 function Login() {
   const formRef = useRef(null);
@@ -46,7 +48,7 @@ function Login() {
       if (studentIsSelected) {
         navigate('activity-calendar');
       } else {
-        navigate('schedule-activities');
+        navigate('scheduled-activities');
       }
     } else {
       toast(`${studentIsSelected ? 'Suap' : 'Siap'} ou senha inválidos`, {
@@ -102,9 +104,7 @@ function Login() {
           <img className="ScheduleSvg" src={ScheuleSvg} alt="" />
         </BoxAnimations>
       </BoxContent>
-      <Footer>
-        <small>&copy; Copyright 2022 Quick Dates</small>
-      </Footer>
+      <Footer />
     </Container>
   );
 }

@@ -2,8 +2,11 @@ import styled from 'styled-components';
 import Input from '../Input';
 
 export const Container = styled.header`
+  position: fixed;
+  top: 0;
   width: 100%;
   padding: 3rem 0rem;
+  z-index: 2;
   display: flex;
   flex-direction: row;
   align-items: center;
