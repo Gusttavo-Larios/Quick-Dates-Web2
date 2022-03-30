@@ -1,5 +1,7 @@
+import { Container } from './styles';
+
 function ActivityCalendar() {
-  return <div />;
+  return <Container />;
 }
 
 export default ActivityCalendar;
