@@ -7,10 +7,12 @@ interface DrawerMenuTypes {
 }
 
 function Drawer({ children }: DrawerMenuTypes) {
-  const { isVisible, changeVisibility } = React.useContext(DrawerContext);
+  const { changeDrawerVisibility, drawerIsActive } =
+    React.useContext(DrawerContext);
+
   return (
-    <Container isVisible={isVisible}>
-      <Close onClick={() => changeVisibility(!isVisible)} />
+    <Container isVisible={drawerIsActive}>
+      <Close onClick={changeDrawerVisibility} />
       <ContentDrawer>{children}</ContentDrawer>
     </Container>
   );

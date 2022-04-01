@@ -18,4 +18,8 @@ export const Button = styled.button`
   &:hover {
     filter: opacity(0.7);
   }
+
+  @media (max-width: 1050px) {
+    display: none;
+  }
 `;

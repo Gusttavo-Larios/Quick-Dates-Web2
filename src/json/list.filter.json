@@ -1,0 +1,6 @@
+[
+  { "label": "Mais recentes", "id": 0 },
+  { "label": "Mais antigas", "id": 1 },
+  { "label": "Ativas", "id": 2 },
+  { "label": "Encerradas", "id": 3 }
+]

@@ -1,5 +1,5 @@
 import FormActivity from '../../components/FormActivity';
-import PageTeacher from '../../components/PageTeacher';
+import PageTeacher from '../../components/TeacherPage';
 import { Title } from './styles';
 
 function SheduledActivity() {

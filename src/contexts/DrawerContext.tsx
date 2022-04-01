@@ -1,8 +1,9 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 
 type TypesContextDrawer = {
-  isVisible: boolean;
-  changeVisibility: (state: boolean) => void;
+  drawerIsActive: boolean;
+  changeDrawerVisibility: () => void;
 };
 
 type TypesProviderDrawer = {
@@ -10,22 +11,27 @@ type TypesProviderDrawer = {
 };
 
 const DrawerContext = React.createContext({
-  isVisible: false,
-  changeVisibility: () => null,
+  drawerIsActive: false,
+  changeDrawerVisibility: () => null,
 } as TypesContextDrawer);
 
 function DrawerContextProvider({ children }: TypesProviderDrawer) {
-  const [isVisible, setIsVisible] = React.useState<boolean>(false);
+  const [drawerIsActive, setActive] = React.useState<boolean>(false);
 
-  function changeVisibility(state: boolean) {
-    setIsVisible(state);
+  function changeDrawerVisibility() {
+    setActive(!drawerIsActive);
   }
+
+  const { pathname } = useLocation();
+  React.useEffect(() => {
+    setActive(false);
+  }, [pathname]);
 
   return (
     <DrawerContext.Provider
       value={{
-        isVisible,
-        changeVisibility,
+        drawerIsActive,
+        changeDrawerVisibility,
       }}
     >
       {children}

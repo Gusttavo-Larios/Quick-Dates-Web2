@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Input from '../Input';
+import { BsSearch } from 'react-icons/bs';
 
 export const Container = styled.header`
   position: fixed;
@@ -12,10 +13,25 @@ export const Container = styled.header`
   align-items: center;
   justify-content: space-around;
   background-color: ${props => props.theme.COLORS.GRAY_100};
+
+  @media (max-width: 1050px) {
+    padding: 3rem 2.5rem;
+    justify-content: space-between;
+    background-color: ${props => props.theme.COLORS.WHITE_100};
+  }
 `;
 
-export const Logo = styled.img`
+export const LogoDesktop = styled.img`
   width: 19.5rem;
+  @media (max-width: 500px) {
+    display: none;
+  }
+`;
+
+export const LogoMobile = styled.img`
+  @media (min-width: 501px) {
+    display: none;
+  }
 `;
 
 export const BoxInput = styled.div`
@@ -33,6 +49,10 @@ export const BoxInput = styled.div`
     outline-width: 0.3rem;
     outline-style: solid;
     outline-color: ${props => props.theme.COLORS.BLACK_900};
+  }
+
+  @media (max-width: 1050px) {
+    display: none;
   }
 `;
 
@@ -56,6 +76,11 @@ export const InputText = styled.input`
   }
 `;
 
+export const IconSearch = styled(BsSearch)`
+  font-size: 3rem;
+  color: ${props => props.theme.COLORS.GRAY_500};
+`;
+
 export const BoxUser = styled.div`
   display: flex;
   flex-direction: row;
@@ -67,6 +92,10 @@ export const Avatar = styled.img`
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
+
+  @media (max-width: 1050px) {
+    display: none;
+  }
 `;
 
 export const Name = styled.span`
@@ -76,4 +105,8 @@ export const Name = styled.span`
   line-height: 2.1rem;
   letter-spacing: 0.1em;
   color: ${props => props.theme.COLORS.GRAY_600};
+
+  @media (max-width: 1050px) {
+    display: none;
+  }
 `;

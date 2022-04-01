@@ -10,10 +10,11 @@ export const Container = styled.div`
   overflow-y: hidden;
 
   @media (max-width: 1200px) {
-    padding: 5rem 4rem;
+    padding: 5rem 4rem 0rem 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-y: scroll;
   }
 `;
 

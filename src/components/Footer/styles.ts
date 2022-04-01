@@ -11,6 +11,7 @@ export const Container = styled.footer`
   justify-content: flex-end;
 
   @media (max-width: 1200px) {
+    position: static;
     padding: 4rem 4rem;
     align-items: center;
     justify-content: center;

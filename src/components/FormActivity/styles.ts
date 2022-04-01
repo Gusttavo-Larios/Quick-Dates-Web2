@@ -4,7 +4,7 @@ import Input from '../Input';
 import TextArea from '../TextArea';
 
 export const UnForm = styled(Form)`
-  width: 45rem;
+  width: 100%;
   padding: 3rem;
   background-color: ${props => props.theme.COLORS.GRAY_100};
 `;
