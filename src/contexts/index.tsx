@@ -1,5 +1,6 @@
 import { DrawerContextProvider } from './DrawerContext';
 import { FilterContextProvider } from './FilterContext';
+import { FormActivityProvider } from './FormActivityContext';
 
 type GlobalContextProviderTypes = {
   children: React.ReactNode;
@@ -8,7 +9,9 @@ type GlobalContextProviderTypes = {
 function GlobalContextProvider({ children }: GlobalContextProviderTypes) {
   return (
     <DrawerContextProvider>
-      <FilterContextProvider>{children}</FilterContextProvider>
+      <FilterContextProvider>
+        <FormActivityProvider>{children}</FormActivityProvider>
+      </FilterContextProvider>
     </DrawerContextProvider>
   );
 }

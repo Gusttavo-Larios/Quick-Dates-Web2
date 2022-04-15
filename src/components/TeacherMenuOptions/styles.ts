@@ -62,14 +62,14 @@ export const IconSheduleActivity = styled(AiOutlineFileAdd)<IconTypes>`
   font-size: 3rem;
   color: ${props =>
     props.isActive
-      ? props.theme.COLORS.GRENN_200
+      ? props.theme.COLORS.WHITE_100
       : props.theme.COLORS.GRAY_200};
 `;
 export const IconSheduledActivities = styled(AiOutlineCalendar)<IconTypes>`
   font-size: 3rem;
   color: ${props =>
     props.isActive
-      ? props.theme.COLORS.GRENN_200
+      ? props.theme.COLORS.WHITE_100
       : props.theme.COLORS.GRAY_200};
 `;
 export const IconLogOut = styled(FiLogOut)`

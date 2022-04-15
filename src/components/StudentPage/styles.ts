@@ -1,18 +1,16 @@
-import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  position: relative;
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex: 1;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   background-color: ${props => props.theme.COLORS.WHITE_100};
 `;
 
-export const ContentPage = styled(motion.main)`
-  width: 55rem;
+export const ContentPage = styled.main`
+  width: 90%;
   margin-top: 20rem;
   display: flex;
   flex-direction: column;

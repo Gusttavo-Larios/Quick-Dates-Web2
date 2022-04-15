@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import Input from '../Input';
 import { BsSearch } from 'react-icons/bs';
+import { motion } from 'framer-motion';
 
-export const Container = styled.header`
+export const Container = styled(motion.header)`
   position: fixed;
   top: 0;
   width: 100%;

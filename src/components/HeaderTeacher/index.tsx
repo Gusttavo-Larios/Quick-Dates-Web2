@@ -16,7 +16,20 @@ import Menu from '../Menu';
 
 function HeaderTeacher() {
   return (
-    <Container>
+    <Container
+      initial={{
+        top: '-10rem',
+      }}
+      animate={{
+        top: '0rem',
+      }}
+      transition={{
+        type: 'spring',
+        stiffness: 260,
+        damping: 20,
+        duration: 2500,
+      }}
+    >
       <LogoDesktop src={LogoDesktopSvg} />
       <LogoMobile src={LogoMobileSvg} />
       <BoxInput>

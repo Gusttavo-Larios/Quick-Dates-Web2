@@ -1,6 +1,7 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
-export const Button = styled.button`
+export const Button = styled(motion.button)`
   position: fixed;
   top: 36rem;
   left: 5rem;

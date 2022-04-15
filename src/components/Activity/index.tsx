@@ -11,7 +11,20 @@ type ActivityType = {
 function Activity({ item }: ActivityType) {
   const { status, period, team } = item;
   return (
-    <Container>
+    <Container
+      initial={{
+        visibility: 'hidden',
+      }}
+      animate={{
+        visibility: 'visible',
+      }}
+      transition={{
+        type: 'spring',
+        stiffness: 260,
+        damping: 20,
+        duration: 3000,
+      }}
+    >
       <Status status={status}>{status ? 'Ativa' : 'Encerrada'}</Status>
       <Team>{team}</Team>
       <Discipline>{period}</Discipline>

@@ -1,7 +1,8 @@
-import { Container } from './styles';
+import Schedule from '../../components/Schedule';
+import StudentPage from '../../components/StudentPage';
 
 function ActivityCalendar() {
-  return <Container />;
+  return <StudentPage>{/* <Schedule /> */}</StudentPage>;
 }
 
 export default ActivityCalendar;

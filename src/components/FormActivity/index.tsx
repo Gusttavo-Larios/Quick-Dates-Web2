@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FormActivityContext } from '../../contexts/FormActivityContext';
 import {
   BackForm,
   BoxButtons,
@@ -17,7 +18,7 @@ type FormActivity = {
 
 function FormActivity({ submit }: FormActivity) {
   const formRef = React.useRef(null);
-  const [lastStage, setLastStage] = useState(false);
+  const { lastStage, navigateForm } = React.useContext(FormActivityContext);
   return (
     <UnForm ref={formRef} onSubmit={submit}>
       <BoxContentForm isVisible={!lastStage}>
@@ -36,7 +37,7 @@ function FormActivity({ submit }: FormActivity) {
         <Label>Tipo de Avaliação</Label>
         <InputText name="typeActivity" />
 
-        <NextForm onClick={() => setLastStage(!lastStage)}>Avançar</NextForm>
+        <NextForm onClick={() => navigateForm()}>Avançar</NextForm>
       </BoxContentForm>
       <BoxContentForm isVisible={lastStage}>
         <Label>Data de Início</Label>
@@ -55,7 +56,7 @@ function FormActivity({ submit }: FormActivity) {
         <TextField name="description" cols={50} wrap="soft" />
 
         <BoxButtons>
-          <BackForm onClick={() => setLastStage(!lastStage)}>Voltar</BackForm>
+          <BackForm onClick={() => navigateForm()}>Voltar</BackForm>
           <Save type="submit">Agendar</Save>
         </BoxButtons>
       </BoxContentForm>

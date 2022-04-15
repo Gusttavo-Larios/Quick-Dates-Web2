@@ -12,7 +12,21 @@ function GoBack() {
   }
 
   return (
-    <Button onClick={goBack}>
+    <Button
+      onClick={goBack}
+      initial={{
+        left: '-10rem',
+      }}
+      animate={{
+        left: '5rem',
+      }}
+      transition={{
+        type: 'spring',
+        stiffness: 260,
+        damping: 20,
+        duration: 1000,
+      }}
+    >
       <HiOutlineChevronLeft color={theme.COLORS.WHITE_100} size="4.2rem" />
     </Button>
   );
