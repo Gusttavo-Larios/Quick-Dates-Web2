@@ -1,3 +1,129 @@
-.rbc-btn-group button:first {
+.rbc-calendar {
+  /*Calendar*/
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  /* margin-top: 3rem; */
+  width: 100%;
+}
+
+span.rbc-toolbar-label {
+  /*Label*/
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-text-card);
+  display: flex;
+  justify-content: flex-end;
+  text-transform: capitalize;
+}
+
+.rbc-btn-group button {
+  /*Buttons top*/
+  background-color: var(--background-button-primary);
+  color: var(--background-card-secundary);
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+}
+
+.rbc-btn-group button:hover {
+  color: var(--background-button-primary);
+}
+
+.rbc-toolbar button:active,
+.rbc-toolbar button.rbc-active {
+  /*Button selecteed*/
+  background-color: var(--background-button-secondary);
+}
+
+.rbc-toolbar button:active,
+.rbc-toolbar button.rbc-active:hover {
+  background-color: var(--background-button-primary);
+}
+
+.rbc-header {
+  /*Header days*/
+  /* background-color: var(--color-text-visited-header); */
+  color: var(--background-button-primary);
+  border: 1px solid var(--color-text-visited-header);
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+span[role='columnheader'] {
+  /*Days*/
+  font-size: 1.8rem;
+}
+
+a[role='cell'] {
+  /*Day number*/
+  font-size: 1.6rem;
+  color: var(--background-footer);
+}
+
+.rbc-day-bg {
+  /*Container days*/
+  border-left: 1px solid var(--color-text-visited-header);
+  border-right: 1px solid var(--color-text-visited-header);
+}
+
+.rbc-btn-group:last-child button:nth-child(4) {
+  /*botoes*/
   display: none;
+}
+
+div.rbc-timeslot-group {
+  height: 60px;
+}
+
+/*Mobile*/
+@media (max-width: 425px) {
+  .rbc-calendar {
+    /*Calendar*/
+    margin-bottom: 2rem;
+  }
+
+  .rbc-toolbar {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .rbc-btn-group button {
+    /*Buttons top*/
+    font-size: 1.3rem;
+  }
+
+  span.rbc-toolbar-label {
+    /*Label*/
+    font-size: 2rem;
+  }
+
+  /*events*/
+  .rbc-event {
+    height: 3rem;
+    display: flex;
+  }
+
+  .rbc-event-content {
+    font-size: 1.5rem;
+  }
+}
+
+/*Mobile*/
+@media (max-width: 280px) {
+  button {
+    /*Buttons top*/
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6.5rem;
+    padding: 0;
+  }
+
+  span.rbc-toolbar-label {
+    /*Label*/
+    font-size: 1.2rem;
+    width: 2.5rem;
+  }
 }
